@@ -8,3 +8,15 @@
 sudo docker network create jenkins-network
 
 ```
+
+작업 디렉토리 권한 변경
+```
+sudo chown 1000 jenkins_home/
+
+```
+
+패스 워드
+```
+docker exec -it jenkins cat /var/jenkins_home/secrets/initialAdminPassword
+
+```
