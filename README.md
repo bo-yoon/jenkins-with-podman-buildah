@@ -11,6 +11,7 @@ sudo docker network create jenkins-network
 
 작업 디렉토리 권한 변경
 ```
+mkdir jenkins_home
 sudo chown 1000 jenkins_home/
 
 ```
