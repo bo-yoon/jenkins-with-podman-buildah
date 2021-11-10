@@ -1,4 +1,4 @@
-FROM jenkins:2.60.3-alpine
+FROM jenkinsci/jenkins:2.60.3-alpine
 USER root
 
 RUN apt-get update && \
