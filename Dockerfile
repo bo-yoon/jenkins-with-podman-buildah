@@ -16,7 +16,7 @@ apt-get update && \
 apt-get -y install docker-ce
 
 RUN apt-get -y install podman
-RUN apt-get -y install buildah -y
+RUN apt-get -y install buildah
 
 
 
