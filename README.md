@@ -6,9 +6,32 @@
 
 > 도커 컴포즈, 도커 사전 설치 필요
 > 
-> 리눅스 버전
+>  
 > 
 > podman, buildah 사용
+
+
+<br>
+
+## podman 설치 가이드
+
+https://podman.io/getting-started/installation
+
+
+맥
+
+```shell
+
+brew install podman
+
+podman machine init
+podman machine start
+
+podman info
+
+```
+
+
 
 
 * 일반 버전은 base 브랜치에 있음. 필요시 사용
