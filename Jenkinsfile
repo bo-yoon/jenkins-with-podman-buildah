@@ -5,6 +5,8 @@ pipeline {
         stage('1. settings') {
             steps {
                 echo 'setting..'
+                apt-get install -y podman
+                apt-get install -y buildah
                 podman version
                 buildah version
             }
