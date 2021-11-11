@@ -1,4 +1,4 @@
-FROM jenkinsci/jenkins:2.60.3-alpine
+FROM jenkins:2.60.3-alpine
 USER root
 
 RUN apt-get update && \
@@ -13,18 +13,23 @@ add-apt-repository \
    $(lsb_release -cs) \
    stable" && \
 apt-get update && \
-apt-get -y install docker-ce
+apt-get -y install docker-ce && \
+apt-get -y install podman && \
+apt-get -y install buildah
 
-RUN apt-get -y install podman
-RUN apt-get -y install buildah
+
 RUN podman --version
 RUN buildah --version
+RUN apk add git
 
 
 
 
 RUN curl -L "https://github.com/docker/compose/releases/download/1.27.4/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose && chmod +x /usr/local/bin/docker-compose
 
+RUN addgroup docker jenkins
+
 RUN usermod -aG docker jenkins
 
 USER jenkins
+RUN jenkins-plugin-cli --plugins "blueocean:1.24.6 docker-workflow:1.26"
