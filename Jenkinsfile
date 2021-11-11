@@ -5,8 +5,8 @@ pipeline {
         stage('1. settings') {
             steps {
                 echo 'setting..'
-                podman --version
-                buildah --version
+                podman version
+                buildah version
             }
         }
         stage('2. building') {
