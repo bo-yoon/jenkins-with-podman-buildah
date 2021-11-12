@@ -2,13 +2,11 @@ pipeline {
     agent any
 
     stages {
-        stage('1. settings') {
+        stage('1. settings 확인') {
             steps {
                 echo 'setting..'
-                sh 'apk update'
-                sh 'apt add podman'
-                sh 'podman version'
-                buildah version
+                sh 'buildah --version'
+                sh 'podman --version'
             }
         }
         stage('2. building') {
