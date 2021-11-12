@@ -6,11 +6,12 @@
 
 > 도커 컴포즈, 도커 사전 설치 필요
 > 
->  
-> 
-> podman, buildah 사용
+>  리눅스 베이스
+>  aws cli, git, python3, docker 설치
+> podman, buildah 설치 
 
 
+<br>
 <br>
 
 ## podman 설치 가이드
@@ -18,23 +19,14 @@
 https://podman.io/getting-started/installation
 
 
-맥
 
-```shell
-
-brew install podman
-
-podman machine init
-podman machine start
-
-podman info
-
-```
-
-
-
+<br>
+<br>
 
 * 일반 버전은 base 브랜치에 있음. 필요시 사용
+* aws cli와 git, docker 버전은 jenkins-with-awscli-docker 브랜치에 보관
+* 위 이미지에 podman, buildah 를 설치한 버전은 jenkins-with-podman-buildah 브랜치에 보관
+
 
 
 <br>
