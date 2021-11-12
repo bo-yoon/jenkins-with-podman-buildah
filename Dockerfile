@@ -47,9 +47,9 @@ RUN apt-get update && apt-get install -y git
 
 
 
-
-#RUN apt-get -y install podman 
-#RUN apt-get -y install buildah 
+### podman, buildah
+RUN apt-get -y install podman 
+RUN apt-get -y install buildah 
 
 
 
