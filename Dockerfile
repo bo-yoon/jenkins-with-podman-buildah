@@ -1,9 +1,9 @@
 #FROM marshallford/podman AS podman
 # https://hub.docker.com/r/jenkins/jenkins/tags
-FROM jenkins/jenkins:latest-jdk8
+FROM jenkins/jenkins:2.319.1-jdk11
 USER root
 
-RUN apt-get update 
+RUN apt-get update && apt-get install -y lsb-release
 
 RUN  apt-get install -y apt-transport-https \
      ca-certificates \
