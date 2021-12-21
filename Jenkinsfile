@@ -12,7 +12,7 @@ pipeline {
         stage('2. building') {
             steps {
                 echo 'Building..'
-                sh 'podman run -ti --security-opt=label=disable -d --name web httpd'
+                sh 'podman run -ti -d --name web httpd'
                 sh 'podman images'
                 sh 'podman ps'
             }
