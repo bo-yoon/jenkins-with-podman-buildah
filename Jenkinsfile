@@ -12,6 +12,8 @@ pipeline {
         stage('2. building') {
             steps {
                 echo 'Building..'
+                sh 'whoami'
+                sh 'sudo su'
                 sh 'pwd'
                 sh 'buildah bud -t yoonkwon23/bps-app:latest src/.'
                 sh 'podman images'
