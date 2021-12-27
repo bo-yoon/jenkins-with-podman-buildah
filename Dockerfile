@@ -33,10 +33,16 @@ RUN apt-get update \
     && pip3 install --upgrade pip \
     && apt-get clean
 
+
+
+## aws cli version2 install
 RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
 RUN unzip awscliv2.zip
 RUN ./aws/install -i /usr/local/aws-cli -b /usr/local/bin
 RUN aws --version
+
+
+## 아래 명령어는 aws cli 가 버전 1로  설치가 되서 위의  명령어로 설치
 
 # RUN pip3 --no-cache-dir install --upgrade awscli
 RUN groupadd docker
