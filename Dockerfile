@@ -35,9 +35,10 @@ RUN apt-get update \
 
 RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
 RUN unzip awscliv2.zip
-RUN ./aws/install
+RUN ./aws/install -i /usr/local/aws-cli -b /usr/local/bin
+RUN aws --version
 
-RUN pip3 --no-cache-dir install --upgrade awscli
+# RUN pip3 --no-cache-dir install --upgrade awscli
 RUN groupadd docker
 RUN usermod -a -G docker jenkins
 
