@@ -5,6 +5,8 @@ services:
     restart: always
     build:
       context: ./
+    security_opt:
+      - seccomp:unconfined
     ports:
       - 8180:8080
       - 51000:50000

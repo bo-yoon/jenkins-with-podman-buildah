@@ -60,5 +60,3 @@ RUN curl -L "https://github.com/docker/compose/releases/download/1.27.4/docker-c
 
 
 
-USER jenkins
-
