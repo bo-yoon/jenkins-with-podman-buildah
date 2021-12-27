@@ -13,7 +13,7 @@ pipeline {
             steps {
                 echo 'Building..'
                 sh 'whoami'
-     #           sh 'echo -e "[registries.search]\nregistries = ['docker.io']" | tee /etc/containers/registries.conf'
+
                 sh 'pwd'
                 sh 'buildah bud -t yoonkwon23/bps-app:latest src/.'
                 sh 'podman images'
