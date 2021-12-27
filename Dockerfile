@@ -33,6 +33,9 @@ RUN apt-get update \
     && pip3 install --upgrade pip \
     && apt-get clean
 
+RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+RUN unzip awscliv2.zip
+RUN ./aws/install
 
 RUN pip3 --no-cache-dir install --upgrade awscli
 RUN groupadd docker
